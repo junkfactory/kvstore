@@ -79,18 +79,10 @@ public final class KeyValues {
       "esponseB%\n\026io.grpc.examples.protoB\tKeyVa" +
       "luesP\001b\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_io_grpc_CreateRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_io_grpc_CreateRequest_fieldAccessorTable = new

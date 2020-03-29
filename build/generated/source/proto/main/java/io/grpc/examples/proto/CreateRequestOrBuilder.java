@@ -9,11 +9,13 @@ public interface CreateRequestOrBuilder extends
 
   /**
    * <code>bytes key = 1;</code>
+   * @return The key.
    */
   com.google.protobuf.ByteString getKey();
 
   /**
    * <code>bytes value = 2;</code>
+   * @return The value.
    */
   com.google.protobuf.ByteString getValue();
 }

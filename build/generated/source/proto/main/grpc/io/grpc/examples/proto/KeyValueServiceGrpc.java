@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.10.0)",
+    value = "by gRPC proto compiler (version 1.28.0)",
     comments = "Source: kvstore.proto")
 public final class KeyValueServiceGrpc {
 
@@ -27,160 +27,142 @@ public final class KeyValueServiceGrpc {
   public static final String SERVICE_NAME = "io.grpc.KeyValueService";
 
   // Static method descriptors that strictly reflect the proto.
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getCreateMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<io.grpc.examples.proto.CreateRequest,
-      io.grpc.examples.proto.CreateResponse> METHOD_CREATE = getCreateMethodHelper();
-
   private static volatile io.grpc.MethodDescriptor<io.grpc.examples.proto.CreateRequest,
       io.grpc.examples.proto.CreateResponse> getCreateMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Create",
+      requestType = io.grpc.examples.proto.CreateRequest.class,
+      responseType = io.grpc.examples.proto.CreateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<io.grpc.examples.proto.CreateRequest,
       io.grpc.examples.proto.CreateResponse> getCreateMethod() {
-    return getCreateMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<io.grpc.examples.proto.CreateRequest,
-      io.grpc.examples.proto.CreateResponse> getCreateMethodHelper() {
     io.grpc.MethodDescriptor<io.grpc.examples.proto.CreateRequest, io.grpc.examples.proto.CreateResponse> getCreateMethod;
     if ((getCreateMethod = KeyValueServiceGrpc.getCreateMethod) == null) {
       synchronized (KeyValueServiceGrpc.class) {
         if ((getCreateMethod = KeyValueServiceGrpc.getCreateMethod) == null) {
-          KeyValueServiceGrpc.getCreateMethod = getCreateMethod = 
+          KeyValueServiceGrpc.getCreateMethod = getCreateMethod =
               io.grpc.MethodDescriptor.<io.grpc.examples.proto.CreateRequest, io.grpc.examples.proto.CreateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.grpc.KeyValueService", "Create"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   io.grpc.examples.proto.CreateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   io.grpc.examples.proto.CreateResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new KeyValueServiceMethodDescriptorSupplier("Create"))
-                  .build();
-          }
+              .setSchemaDescriptor(new KeyValueServiceMethodDescriptorSupplier("Create"))
+              .build();
         }
-     }
-     return getCreateMethod;
+      }
+    }
+    return getCreateMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getRetrieveMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<io.grpc.examples.proto.RetrieveRequest,
-      io.grpc.examples.proto.RetrieveResponse> METHOD_RETRIEVE = getRetrieveMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<io.grpc.examples.proto.RetrieveRequest,
       io.grpc.examples.proto.RetrieveResponse> getRetrieveMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Retrieve",
+      requestType = io.grpc.examples.proto.RetrieveRequest.class,
+      responseType = io.grpc.examples.proto.RetrieveResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<io.grpc.examples.proto.RetrieveRequest,
       io.grpc.examples.proto.RetrieveResponse> getRetrieveMethod() {
-    return getRetrieveMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<io.grpc.examples.proto.RetrieveRequest,
-      io.grpc.examples.proto.RetrieveResponse> getRetrieveMethodHelper() {
     io.grpc.MethodDescriptor<io.grpc.examples.proto.RetrieveRequest, io.grpc.examples.proto.RetrieveResponse> getRetrieveMethod;
     if ((getRetrieveMethod = KeyValueServiceGrpc.getRetrieveMethod) == null) {
       synchronized (KeyValueServiceGrpc.class) {
         if ((getRetrieveMethod = KeyValueServiceGrpc.getRetrieveMethod) == null) {
-          KeyValueServiceGrpc.getRetrieveMethod = getRetrieveMethod = 
+          KeyValueServiceGrpc.getRetrieveMethod = getRetrieveMethod =
               io.grpc.MethodDescriptor.<io.grpc.examples.proto.RetrieveRequest, io.grpc.examples.proto.RetrieveResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.grpc.KeyValueService", "Retrieve"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Retrieve"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   io.grpc.examples.proto.RetrieveRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   io.grpc.examples.proto.RetrieveResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new KeyValueServiceMethodDescriptorSupplier("Retrieve"))
-                  .build();
-          }
+              .setSchemaDescriptor(new KeyValueServiceMethodDescriptorSupplier("Retrieve"))
+              .build();
         }
-     }
-     return getRetrieveMethod;
+      }
+    }
+    return getRetrieveMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getUpdateMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<io.grpc.examples.proto.UpdateRequest,
-      io.grpc.examples.proto.UpdateResponse> METHOD_UPDATE = getUpdateMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<io.grpc.examples.proto.UpdateRequest,
       io.grpc.examples.proto.UpdateResponse> getUpdateMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Update",
+      requestType = io.grpc.examples.proto.UpdateRequest.class,
+      responseType = io.grpc.examples.proto.UpdateResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<io.grpc.examples.proto.UpdateRequest,
       io.grpc.examples.proto.UpdateResponse> getUpdateMethod() {
-    return getUpdateMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<io.grpc.examples.proto.UpdateRequest,
-      io.grpc.examples.proto.UpdateResponse> getUpdateMethodHelper() {
     io.grpc.MethodDescriptor<io.grpc.examples.proto.UpdateRequest, io.grpc.examples.proto.UpdateResponse> getUpdateMethod;
     if ((getUpdateMethod = KeyValueServiceGrpc.getUpdateMethod) == null) {
       synchronized (KeyValueServiceGrpc.class) {
         if ((getUpdateMethod = KeyValueServiceGrpc.getUpdateMethod) == null) {
-          KeyValueServiceGrpc.getUpdateMethod = getUpdateMethod = 
+          KeyValueServiceGrpc.getUpdateMethod = getUpdateMethod =
               io.grpc.MethodDescriptor.<io.grpc.examples.proto.UpdateRequest, io.grpc.examples.proto.UpdateResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.grpc.KeyValueService", "Update"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Update"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   io.grpc.examples.proto.UpdateRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   io.grpc.examples.proto.UpdateResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new KeyValueServiceMethodDescriptorSupplier("Update"))
-                  .build();
-          }
+              .setSchemaDescriptor(new KeyValueServiceMethodDescriptorSupplier("Update"))
+              .build();
         }
-     }
-     return getUpdateMethod;
+      }
+    }
+    return getUpdateMethod;
   }
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  @java.lang.Deprecated // Use {@link #getDeleteMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<io.grpc.examples.proto.DeleteRequest,
-      io.grpc.examples.proto.DeleteResponse> METHOD_DELETE = getDeleteMethodHelper();
 
   private static volatile io.grpc.MethodDescriptor<io.grpc.examples.proto.DeleteRequest,
       io.grpc.examples.proto.DeleteResponse> getDeleteMethod;
 
-  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Delete",
+      requestType = io.grpc.examples.proto.DeleteRequest.class,
+      responseType = io.grpc.examples.proto.DeleteResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<io.grpc.examples.proto.DeleteRequest,
       io.grpc.examples.proto.DeleteResponse> getDeleteMethod() {
-    return getDeleteMethodHelper();
-  }
-
-  private static io.grpc.MethodDescriptor<io.grpc.examples.proto.DeleteRequest,
-      io.grpc.examples.proto.DeleteResponse> getDeleteMethodHelper() {
     io.grpc.MethodDescriptor<io.grpc.examples.proto.DeleteRequest, io.grpc.examples.proto.DeleteResponse> getDeleteMethod;
     if ((getDeleteMethod = KeyValueServiceGrpc.getDeleteMethod) == null) {
       synchronized (KeyValueServiceGrpc.class) {
         if ((getDeleteMethod = KeyValueServiceGrpc.getDeleteMethod) == null) {
-          KeyValueServiceGrpc.getDeleteMethod = getDeleteMethod = 
+          KeyValueServiceGrpc.getDeleteMethod = getDeleteMethod =
               io.grpc.MethodDescriptor.<io.grpc.examples.proto.DeleteRequest, io.grpc.examples.proto.DeleteResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "io.grpc.KeyValueService", "Delete"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   io.grpc.examples.proto.DeleteRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   io.grpc.examples.proto.DeleteResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new KeyValueServiceMethodDescriptorSupplier("Delete"))
-                  .build();
-          }
+              .setSchemaDescriptor(new KeyValueServiceMethodDescriptorSupplier("Delete"))
+              .build();
         }
-     }
-     return getDeleteMethod;
+      }
+    }
+    return getDeleteMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static KeyValueServiceStub newStub(io.grpc.Channel channel) {
-    return new KeyValueServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<KeyValueServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeyValueServiceStub>() {
+        @java.lang.Override
+        public KeyValueServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeyValueServiceStub(channel, callOptions);
+        }
+      };
+    return KeyValueServiceStub.newStub(factory, channel);
   }
 
   /**
@@ -188,7 +170,14 @@ public final class KeyValueServiceGrpc {
    */
   public static KeyValueServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new KeyValueServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<KeyValueServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeyValueServiceBlockingStub>() {
+        @java.lang.Override
+        public KeyValueServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeyValueServiceBlockingStub(channel, callOptions);
+        }
+      };
+    return KeyValueServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -196,7 +185,14 @@ public final class KeyValueServiceGrpc {
    */
   public static KeyValueServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new KeyValueServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<KeyValueServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<KeyValueServiceFutureStub>() {
+        @java.lang.Override
+        public KeyValueServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new KeyValueServiceFutureStub(channel, callOptions);
+        }
+      };
+    return KeyValueServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -207,55 +203,55 @@ public final class KeyValueServiceGrpc {
      */
     public void create(io.grpc.examples.proto.CreateRequest request,
         io.grpc.stub.StreamObserver<io.grpc.examples.proto.CreateResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
     }
 
     /**
      */
     public void retrieve(io.grpc.examples.proto.RetrieveRequest request,
         io.grpc.stub.StreamObserver<io.grpc.examples.proto.RetrieveResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getRetrieveMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getRetrieveMethod(), responseObserver);
     }
 
     /**
      */
     public void update(io.grpc.examples.proto.UpdateRequest request,
         io.grpc.stub.StreamObserver<io.grpc.examples.proto.UpdateResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getUpdateMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getUpdateMethod(), responseObserver);
     }
 
     /**
      */
     public void delete(io.grpc.examples.proto.DeleteRequest request,
         io.grpc.stub.StreamObserver<io.grpc.examples.proto.DeleteResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteMethodHelper(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getCreateMethodHelper(),
+            getCreateMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.grpc.examples.proto.CreateRequest,
                 io.grpc.examples.proto.CreateResponse>(
                   this, METHODID_CREATE)))
           .addMethod(
-            getRetrieveMethodHelper(),
+            getRetrieveMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.grpc.examples.proto.RetrieveRequest,
                 io.grpc.examples.proto.RetrieveResponse>(
                   this, METHODID_RETRIEVE)))
           .addMethod(
-            getUpdateMethodHelper(),
+            getUpdateMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.grpc.examples.proto.UpdateRequest,
                 io.grpc.examples.proto.UpdateResponse>(
                   this, METHODID_UPDATE)))
           .addMethod(
-            getDeleteMethodHelper(),
+            getDeleteMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 io.grpc.examples.proto.DeleteRequest,
@@ -267,19 +263,15 @@ public final class KeyValueServiceGrpc {
 
   /**
    */
-  public static final class KeyValueServiceStub extends io.grpc.stub.AbstractStub<KeyValueServiceStub> {
-    private KeyValueServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private KeyValueServiceStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class KeyValueServiceStub extends io.grpc.stub.AbstractAsyncStub<KeyValueServiceStub> {
+    private KeyValueServiceStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected KeyValueServiceStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected KeyValueServiceStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new KeyValueServiceStub(channel, callOptions);
     }
 
@@ -288,7 +280,7 @@ public final class KeyValueServiceGrpc {
     public void create(io.grpc.examples.proto.CreateRequest request,
         io.grpc.stub.StreamObserver<io.grpc.examples.proto.CreateResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getCreateMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -296,7 +288,7 @@ public final class KeyValueServiceGrpc {
     public void retrieve(io.grpc.examples.proto.RetrieveRequest request,
         io.grpc.stub.StreamObserver<io.grpc.examples.proto.RetrieveResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getRetrieveMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getRetrieveMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -304,7 +296,7 @@ public final class KeyValueServiceGrpc {
     public void update(io.grpc.examples.proto.UpdateRequest request,
         io.grpc.stub.StreamObserver<io.grpc.examples.proto.UpdateResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getUpdateMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -312,25 +304,21 @@ public final class KeyValueServiceGrpc {
     public void delete(io.grpc.examples.proto.DeleteRequest request,
         io.grpc.stub.StreamObserver<io.grpc.examples.proto.DeleteResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getDeleteMethodHelper(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class KeyValueServiceBlockingStub extends io.grpc.stub.AbstractStub<KeyValueServiceBlockingStub> {
-    private KeyValueServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private KeyValueServiceBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class KeyValueServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<KeyValueServiceBlockingStub> {
+    private KeyValueServiceBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected KeyValueServiceBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected KeyValueServiceBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new KeyValueServiceBlockingStub(channel, callOptions);
     }
 
@@ -338,46 +326,42 @@ public final class KeyValueServiceGrpc {
      */
     public io.grpc.examples.proto.CreateResponse create(io.grpc.examples.proto.CreateRequest request) {
       return blockingUnaryCall(
-          getChannel(), getCreateMethodHelper(), getCallOptions(), request);
+          getChannel(), getCreateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public io.grpc.examples.proto.RetrieveResponse retrieve(io.grpc.examples.proto.RetrieveRequest request) {
       return blockingUnaryCall(
-          getChannel(), getRetrieveMethodHelper(), getCallOptions(), request);
+          getChannel(), getRetrieveMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public io.grpc.examples.proto.UpdateResponse update(io.grpc.examples.proto.UpdateRequest request) {
       return blockingUnaryCall(
-          getChannel(), getUpdateMethodHelper(), getCallOptions(), request);
+          getChannel(), getUpdateMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public io.grpc.examples.proto.DeleteResponse delete(io.grpc.examples.proto.DeleteRequest request) {
       return blockingUnaryCall(
-          getChannel(), getDeleteMethodHelper(), getCallOptions(), request);
+          getChannel(), getDeleteMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class KeyValueServiceFutureStub extends io.grpc.stub.AbstractStub<KeyValueServiceFutureStub> {
-    private KeyValueServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private KeyValueServiceFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class KeyValueServiceFutureStub extends io.grpc.stub.AbstractFutureStub<KeyValueServiceFutureStub> {
+    private KeyValueServiceFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected KeyValueServiceFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected KeyValueServiceFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new KeyValueServiceFutureStub(channel, callOptions);
     }
 
@@ -386,7 +370,7 @@ public final class KeyValueServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.grpc.examples.proto.CreateResponse> create(
         io.grpc.examples.proto.CreateRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getCreateMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
 
     /**
@@ -394,7 +378,7 @@ public final class KeyValueServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.grpc.examples.proto.RetrieveResponse> retrieve(
         io.grpc.examples.proto.RetrieveRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getRetrieveMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getRetrieveMethod(), getCallOptions()), request);
     }
 
     /**
@@ -402,7 +386,7 @@ public final class KeyValueServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.grpc.examples.proto.UpdateResponse> update(
         io.grpc.examples.proto.UpdateRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getUpdateMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getUpdateMethod(), getCallOptions()), request);
     }
 
     /**
@@ -410,7 +394,7 @@ public final class KeyValueServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<io.grpc.examples.proto.DeleteResponse> delete(
         io.grpc.examples.proto.DeleteRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getDeleteMethodHelper(), getCallOptions()), request);
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
     }
   }
 
@@ -513,10 +497,10 @@ public final class KeyValueServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new KeyValueServiceFileDescriptorSupplier())
-              .addMethod(getCreateMethodHelper())
-              .addMethod(getRetrieveMethodHelper())
-              .addMethod(getUpdateMethodHelper())
-              .addMethod(getDeleteMethodHelper())
+              .addMethod(getCreateMethod())
+              .addMethod(getRetrieveMethod())
+              .addMethod(getUpdateMethod())
+              .addMethod(getDeleteMethod())
               .build();
         }
       }

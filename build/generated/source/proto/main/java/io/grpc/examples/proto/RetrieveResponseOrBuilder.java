@@ -9,6 +9,7 @@ public interface RetrieveResponseOrBuilder extends
 
   /**
    * <code>bytes value = 1;</code>
+   * @return The value.
    */
   com.google.protobuf.ByteString getValue();
 }
