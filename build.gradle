@@ -12,9 +12,9 @@ repositories {
 
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.3.11'
-    compile 'io.grpc:grpc-core:1.13.1'
-    compile 'io.grpc:grpc-stub:1.13.1'
-    compile 'io.grpc:grpc-netty:1.13.1'
+    compile 'io.grpc:grpc-core:1.28.0'
+    compile 'io.grpc:grpc-stub:1.28.0'
+    compile 'io.grpc:grpc-netty:1.28.0'
 }
 
 

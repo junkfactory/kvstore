@@ -15,7 +15,10 @@ import io.grpc.stub.ClientCalls;
 
 import java.nio.ByteBuffer;
 import java.util.Random;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicReference;
@@ -35,10 +38,12 @@ final class KvClient {
     private final RandomAccessSet<ByteBuffer> knownKeys = new RandomAccessSet<>();
     private final Channel channel;
     private final Semaphore limiter = new Semaphore(100);
+    private final ExecutorService callbackExecutor;
     private AtomicLong rpcCount = new AtomicLong();
 
     KvClient(Channel channel) {
         this.channel = channel;
+        this.callbackExecutor = MoreExecutors.getExitingExecutorService((ThreadPoolExecutor) Executors.newCachedThreadPool());
     }
 
     /**
@@ -123,7 +128,7 @@ final class KvClient {
                     error.compareAndSet(null, t);
                 }
             }
-        });
+        }, callbackExecutor);
     }
 
     /**
@@ -171,7 +176,7 @@ final class KvClient {
                     error.compareAndSet(null, t);
                 }
             }
-        });
+        }, callbackExecutor);
     }
 
     /**
@@ -218,7 +223,7 @@ final class KvClient {
                     error.compareAndSet(null, t);
                 }
             }
-        });
+        }, callbackExecutor);
     }
 
     /**
@@ -263,7 +268,7 @@ final class KvClient {
                     error.compareAndSet(null, t);
                 }
             }
-        });
+        }, callbackExecutor);
     }
 
     /**

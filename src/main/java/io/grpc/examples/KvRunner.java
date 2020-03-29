@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 public final class KvRunner {
     private static final Logger logger = Logger.getLogger(KvRunner.class.getName());
 
-    private static final long DURATION_SECONDS = 60;
+    private static final long DURATION_SECONDS = 10;
 
     private Server server;
     private ManagedChannel channel;
@@ -41,7 +41,7 @@ public final class KvRunner {
             throw new IllegalStateException("Already started");
         }
         channel = ManagedChannelBuilder.forTarget("dns:///localhost:" + server.getPort())
-                .usePlaintext(true)
+                .usePlaintext()
                 .build();
         ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
         try {
